@@ -10,4 +10,6 @@ From subtle nods to more daring ones, Fuku Apparel will help you freely and fash
 ## Screenshots
 > Here's a preview image of the program:
 ![Homepage](https://github.com/29yabuki/Fuku-Apparel/blob/main/images/homepage.png)
+
+> Here's the lower part of the homepage that includes the business plan on a tablet-like container:
 ![Homepage Tablet](https://github.com/29yabuki/Fuku-Apparel/blob/main/images/homepage_tablet.png)
