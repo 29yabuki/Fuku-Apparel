@@ -1,0 +1,340 @@
+@font-face {
+    font-family: 'Product Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Open Sans'), local('OpenSans'), url(https://fonts.gstatic.com/s/productsans/v5/HYvgU2fE2nRJvZ5JFAumwegdm0LZdjqr5-oayXSOefg.woff2) format('woff2');
+}
+
+* {
+    box-sizing: border-box;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+::-webkit-scrollbar {
+    width: 0;  /* Remove scrollbar space */
+    background: transparent;  /* Optional: just make scrollbar invisible */
+}
+
+body {
+    background-color:#335A9A;
+}
+
+main {
+    opacity: 0;
+    display: none;
+    background-color:#335A9A;
+    font-family: Product Sans, sans-serif;
+    justify-content: center;
+    align-self: center;
+    height: 100vh;
+    margin: 0;
+    flex-direction: column;
+    transition: opacity 2s ease-in;
+}
+
+header {
+    align-self: center;
+    color: whitesmoke;
+}
+
+h1 {
+    display: inline-block;
+    position: flex;
+    color: white;
+    font-family: 'Righteous', serif;
+    font-size: 10em; 
+    text-shadow: .03em .03em 0 hsla(230,40%,50%,1);
+    text-align: center;
+    justify-content: center;
+    align-self: center;
+    height: 80vh;
+    flex-direction: row;
+    }
+    h1:after {
+      content: attr(data-shadow);
+      position: absolute;
+      top: .06em; left: .06em;
+      z-index: -1;
+      text-shadow: none;
+      background-image:
+        linear-gradient(
+          45deg,
+          transparent 45%,
+          hsla(48,20%,90%,1) 45%,
+          hsla(48,20%,90%,1) 55%,
+          transparent 0
+          );
+}
+  
+  @keyframes shad-anim {
+    0% {background-position: 0 0}
+    0% {background-position: 100% -100%}
+}
+
+/* navigation bar */
+nav {
+    display: flex;
+    background-color: #fff;
+    padding: 20px;
+    width: 80px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 3px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    transform: width 0.6 linear;
+    overflow-x: hidden;
+    position: absolute;
+    top: 1vh;
+    right: 1vh;
+}
+
+nav.active {
+    width: 350px;
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    width: 0;
+    transition: width 0.6 linear;
+}
+
+nav.active ul {
+    width: 100%;
+}
+
+nav ul li {
+    transform: rotateY(0deg);
+    opacity: 0;
+    transform: transform 0.6 linear, opacity 0.6s linear;
+}
+
+nav.active ul li {
+    opacity: 1;
+    transform: rotateY(360deg);
+}
+
+nav ul a {
+    position: relative;
+    color: #335A9A;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.icon {
+    background-color: #fff;
+    border: 0;
+    cursor: pointer;
+    padding: 0;
+    position: relative;
+    height: 30px;
+    width: 30px;
+}
+
+.icon:focus {
+    outline: 0;
+}
+
+.icon .line {
+    background-color: #335A9A;
+    height: 2px;
+    width: 20px;
+    position: absolute;
+    top: 10px;
+    left: 5px;
+    transition: transform 0.6s linear;
+}
+  
+.icon .line2 {
+    top: auto;
+    bottom: 10px;
+}
+
+nav.active .icon .line1 {
+    transform: rotate(-765deg) translateY(5.5px);
+}
+  
+  nav.active .icon .line2 {
+    transform: rotate(765deg) translateY(-5.5px);
+}
+
+
+/* tablet */
+.business_header {
+    align-self: center;
+    position: absolute;
+    color: whitesmoke;
+    top: 500px;
+}
+
+.tablet {
+    color: #333;
+    align-self: center;
+    background-color: whitesmoke;
+    position: absolute;
+    overflow-y: scroll;
+    border: 3px solid #eee;
+    border-radius: 15px;
+    height: 768px;
+    width: 1024px;
+    top: 560px;
+}
+
+.tablet .content {
+    opacity: 0;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: calc(100%- 60px);
+    width: 100%;
+    transition: opacity 0.4 ease;
+    padding: 0px 40px;
+}
+
+.tablet .content.reveal  {
+    opacity: 1;
+}
+
+aside {
+    color: #777;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin-top: -5px;
+    width: 100%;
+}
+
+aside ul {
+    background-color: #fff;
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    height: 60px;
+}
+
+aside li{
+    color: #777;
+    cursor: pointer;
+    flex: 1;
+    padding: 10px;
+    text-align: center;
+}
+
+aside ul li p {
+    font-size: 16px;
+    margin: 2px 0;
+}
+
+aside ul li:hover, 
+aside ul li.active {
+    color: #FFA300;
+}
+
+/* inline markups */
+.center_content {
+    text-align: center;
+    font-size: 12px;
+}
+
+/* loader */
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.loader > span {
+  display: flex;
+  background-color: #FFA300;
+  width: 0px;
+  height: 0px;
+  border-radius: 50%;
+  margin: 0 8px;
+  transform: translate3d(0);
+  animation: bounce 0.6s infinite alternate;
+}
+
+.loader > span:nth-child(2) {
+  background-color: #D5CBA8;
+  animation-delay: 0.2s;
+}
+
+.loader > span:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes bounce {
+  to {
+    width: 16px;
+    height: 16px;
+    transform: translate3d(0, -16px, 0);
+  }
+}
+
+#desc {
+    display: inline-block;
+    position: absolute;
+    color: white;
+    font-family: 'Righteous', serif;
+    font-size: 22px; 
+    text-shadow: .03em .03em 0 hsla(230,40%,50%,1);
+    text-align: center;
+    justify-content: center;
+    position: absolute;
+    align-self: center;
+    top: 390px;
+    }
+    #desc:after {
+      content: attr(data-shadow);
+      position: absolute;
+      top: .06em; left: .06em;
+      z-index: -1;
+      text-shadow: none;
+      background-image:
+        linear-gradient(
+          45deg,
+          transparent 45%,
+          hsla(48,20%,90%,1) 45%,
+          hsla(48,20%,90%,1) 55%,
+          transparent 0
+          );
+}
+
+#catchphrase {
+    display: inline-block;
+    position: absolute;
+    color: white;
+    font-family: 'Righteous', serif;
+    font-size: 5em; 
+    text-shadow: .03em .03em 0 hsla(230,40%,50%,1);
+    text-align: center;
+    justify-content: center;
+    position: absolute;
+    align-self: center;
+    top: 230px;
+    }
+    #catchphrase:after {
+      content: attr(data-shadow);
+      position: absolute;
+      top: .06em; left: .06em;
+      z-index: -1;
+      text-shadow: none;
+      background-image:
+        linear-gradient(
+          45deg,
+          transparent 45%,
+          hsla(48,20%,90%,1) 45%,
+          hsla(48,20%,90%,1) 55%,
+          transparent 0
+          );
+}
+
+.space {
+    margin-top: 450px;
+}
