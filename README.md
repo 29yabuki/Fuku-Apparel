@@ -1,5 +1,5 @@
 # <p align="center">Fuku Apparel</p>
-<p align="center"><i><b>"Own your style"<i><b></p>
+<p align="center"><i><b>"Own your style"</b></i></p>
 <p align='center'>
 Fuku Apparel brings your pop culture needs right to your door, in just one tap.<br>
 Take your pick in our catalogue of original pop culture-inspired designs.<br>
