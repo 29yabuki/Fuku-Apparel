@@ -10,3 +10,4 @@ From subtle nods to more daring ones, Fuku Apparel will help you freely and fash
 ## Screenshots
 > Here's a preview image of the program:
 ![Homepage](https://github.com/29yabuki/Fuku-Apparel/blob/main/images/homepage.png)
+![Homepage Tablet](https://github.com/29yabuki/Fuku-Apparel/blob/main/images/homepage_tablet.png)
