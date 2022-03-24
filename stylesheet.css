@@ -283,14 +283,13 @@ aside ul li.active {
 #desc {
     display: inline-block;
     position: absolute;
+    text-align: center;
+    justify-content: center;
+    align-self: center;
     color: white;
     font-family: 'Righteous', serif;
     font-size: 22px; 
     text-shadow: .03em .03em 0 hsla(230,40%,50%,1);
-    text-align: center;
-    justify-content: center;
-    position: absolute;
-    align-self: center;
     top: 390px;
     }
     #desc:after {
@@ -312,14 +311,13 @@ aside ul li.active {
 #catchphrase {
     display: inline-block;
     position: absolute;
+    text-align: center;
+    justify-content: center;
+    align-self: center;
     color: white;
     font-family: 'Righteous', serif;
     font-size: 5em; 
     text-shadow: .03em .03em 0 hsla(230,40%,50%,1);
-    text-align: center;
-    justify-content: center;
-    position: absolute;
-    align-self: center;
     top: 230px;
     }
     #catchphrase:after {
