@@ -179,33 +179,30 @@ nav.active .icon .line1 {
   }
 
 /* Members */
-#member_header {
-    position: relative; 
-    color: whitesmoke; 
-    font-family: Product Sans, serif; 
-    text-shadow: .03em .03em 0 hsla(230,40%,50%,1); 
-    text-align: center; 
-    top: 50px
+
+.member_section {
+    position: relative;
+    height:90vh;
+    font-family: Product Sans, serif;
+    color: #fff;
+    margin: 0 14vw;
 }
 
-#member_table {
-    position: relative;
-    justify-content: center;
-    align-self: center;
+.member_header {
+    padding-top: 5%;
+    font-size: 3em;
     text-align: center;
-    position: relative;
-    color: whitesmoke;
-    font-family: Product Sans, serif;
-    top: 40px;
+}
+
+#member_container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2vw 9vw;
 }
 
 .member {
-    position: relative; 
-    justify-content: center; 
-    align-self: center;
-    text-align: center;
-    position: relative;
-    color: whitesmoke; 
-    font-family: Product Sans, serif;
-    top: 40px;
+    width:11.5vw;
+    border: 5px solid #333
 }
