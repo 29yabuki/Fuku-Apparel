@@ -1,0 +1,226 @@
+@font-face {
+    font-family: 'Product Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Open Sans'), local('OpenSans'), url(https://fonts.gstatic.com/s/productsans/v5/HYvgU2fE2nRJvZ5JFAumwegdm0LZdjqr5-oayXSOefg.woff2) format('woff2');
+}
+
+::-webkit-scrollbar {
+    width: 0;  /* Remove scrollbar space */
+    background: transparent;  /* Optional: just make scrollbar invisible */
+}
+
+* {
+    box-sizing: border-box;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+body {
+    background-color:#335A9A;
+}
+
+main {
+    opacity: 0;
+    display: none;
+    background-color:#335A9A;
+    font-family: Product Sans, sans-serif;
+    justify-content: center;
+    align-self: center;
+    height: 100vh;
+    margin: 0;
+    flex-direction: column;
+    transition: opacity 2s ease-in;
+}
+
+/* navigation bar */
+nav {
+    display: flex;
+    background-color: #fff;
+    padding: 20px;
+    width: 80px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 3px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    transform: width 0.6 linear;
+    overflow-x: hidden;
+    position: absolute;
+    top: 1vh;
+    right: 1vh;
+}
+
+nav.active {
+    width: 350px;
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    width: 0;
+    transition: width 0.6 linear;
+}
+
+nav.active ul {
+    width: 100%;
+}
+
+nav ul li {
+    transform: rotateY(0deg);
+    opacity: 0;
+    transform: transform 0.6 linear, opacity 0.6s linear;
+}
+
+nav.active ul li {
+    opacity: 1;
+    transform: rotateY(360deg);
+}
+
+nav ul a {
+    position: relative;
+    color: #335A9A;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.icon {
+    background-color: #fff;
+    border: 0;
+    cursor: pointer;
+    padding: 0;
+    position: relative;
+    height: 30px;
+    width: 30px;
+}
+
+.icon:focus {
+    outline: 0;
+}
+
+.icon .line {
+    background-color: #335A9A;
+    height: 2px;
+    width: 20px;
+    position: absolute;
+    top: 10px;
+    left: 5px;
+    transition: transform 0.6s linear;
+}
+  
+.icon .line2 {
+    top: auto;
+    bottom: 10px;
+}
+
+nav.active .icon .line1 {
+    transform: rotate(-765deg) translateY(5.5px);
+}
+  
+  nav.active .icon .line2 {
+    transform: rotate(765deg) translateY(-5.5px);
+}
+
+
+@keyframes bounce {
+  to {
+    width: 16px;
+    height: 16px;
+    transform: translate3d(0, -16px, 0);
+  }
+}
+
+/* inline markups */
+.center_content {
+    text-align: center;
+    font-size: 12px;
+}
+
+/* loader */
+.loader {
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    width: 75%;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    margin-left: -37.5%;
+  }
+  
+  .loader > span {
+    display: flex;
+    background-color: #FFA300;
+    width: 0px;
+    height: 0px;
+    border-radius: 50%;
+    margin: 0 8px;
+    transform: translate3d(0);
+    animation: bounce 0.6s infinite alternate;
+  }
+  
+  .loader > span:nth-child(2) {
+    background-color: #D5CBA8;
+    animation-delay: 0.2s;
+  }
+  
+  .loader > span:nth-child(3) {
+    animation-delay: 0.4s;
+  }
+  
+  @keyframes bounce {
+    to {
+      width: 16px;
+      height: 16px;
+      transform: translate3d(0, -16px, 0);
+    }
+  }
+
+/* CPAR Philippine Art Forms */
+.CPAR {
+    margin-top: 100px;
+    align-self: center;
+    position: absolute
+}
+
+#CPAR_heading {
+    position: relative;
+    color: whitesmoke;
+    font-family: Product Sans, serif;
+    text-shadow: .03em .03em 0 hsla(230,40%,50%,1);
+    text-align: center;
+    top: 320px;
+}
+
+#CPAR_description {
+    justify-content: center; 
+    align-self: center; 
+    text-align: center;
+    position: relative;
+    color: whitesmoke;
+    font-family: Product Sans, serif;
+    top: 300px;
+}
+
+#CPAR_description_td {
+    text-align: justify; 
+    text-justify: inter-word;
+}
+
+#visual {
+    position: relative; top: 320px; right: 10px; border: 5px solid #333
+}
+
+#perform {
+    position: relative; top: 320px; left: 10px; border: 5px solid #333;
+}
+
+#media {
+    position: relative; top: 340px; right: 10px; border: 5px solid #333;
+}
+
+#literary {
+    position: relative; top: 340px; left: 10px; border: 5px solid #333
+}
