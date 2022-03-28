@@ -340,10 +340,10 @@ aside ul li.active {
 }
 
 /* CPAR Philippine Art Forms */
-.CPAR {
+/*.CPAR {
     margin-top: 100px;
     align-self: center;
-    position: relative;
+    position: absolute
 }
 
 #CPAR_heading {
@@ -396,4 +396,4 @@ aside ul li.active {
     top: 1870px;
     left: 525px;
     border: 5px solid #333;
-}
+}*/
