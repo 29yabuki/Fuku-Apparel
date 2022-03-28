@@ -5,15 +5,15 @@
     src: local('Open Sans'), local('OpenSans'), url(https://fonts.gstatic.com/s/productsans/v5/HYvgU2fE2nRJvZ5JFAumwegdm0LZdjqr5-oayXSOefg.woff2) format('woff2');
 }
 
+::-webkit-scrollbar {
+    width: 0;  /* Remove scrollbar space */
+    background: transparent;  /* Optional: just make scrollbar invisible */
+}
+
 * {
     box-sizing: border-box;
     margin-left:auto;
     margin-right:auto;
-}
-
-::-webkit-scrollbar {
-    width: 0;  /* Remove scrollbar space */
-    background: transparent;  /* Optional: just make scrollbar invisible */
 }
 
 body {
@@ -36,20 +36,19 @@ main {
 header {
     align-self: center;
     color: whitesmoke;
+    position: absolute;
+    top: 0px;
 }
 
 h1 {
     display: inline-block;
-    position: flex;
+    text-align: center;
+    justify-content: center;
+    align-self: center;
     color: white;
     font-family: 'Righteous', serif;
     font-size: 10em; 
     text-shadow: .03em .03em 0 hsla(230,40%,50%,1);
-    text-align: center;
-    justify-content: center;
-    align-self: center;
-    height: 80vh;
-    flex-direction: row;
     }
     h1:after {
       content: attr(data-shadow);
@@ -66,6 +65,7 @@ h1 {
           transparent 0
           );
 }
+
   
   @keyframes shad-anim {
     0% {background-position: 0 0}
@@ -235,20 +235,17 @@ aside ul li.active {
     color: #FFA300;
 }
 
-/* inline markups */
-.center_content {
-    text-align: center;
-    font-size: 12px;
-}
 
 /* loader */
 .loader {
   display: flex;
+  position: absolute;
   justify-content: center;
   align-items: center;
   width: 75%;
   position: fixed;
   left: 50%;
+  top: 50%;
   margin-left: -37.5%;
 }
 
@@ -278,6 +275,12 @@ aside ul li.active {
     height: 16px;
     transform: translate3d(0, -16px, 0);
   }
+}
+
+/* inline markups */
+.center_content {
+    text-align: center;
+    font-size: 12px;
 }
 
 #desc {
@@ -336,6 +339,61 @@ aside ul li.active {
           );
 }
 
-.space {
-    margin-top: 450px;
+/* CPAR Philippine Art Forms */
+.CPAR {
+    margin-top: 100px;
+    align-self: center;
+    position: relative;
+}
+
+#CPAR_heading {
+    position: relative;
+    color: whitesmoke;
+    font-family: Product Sans, serif;
+    text-shadow: .03em .03em 0 hsla(230,40%,50%,1);
+    text-align: center;
+    top: 970px;
+}
+
+#CPAR_description {
+    justify-content: center; 
+    align-self: center; 
+    text-align: center;
+    position: relative;
+    color: whitesmoke;
+    font-family: Product Sans, serif;
+    top: 950px;
+}
+
+#CPAR_description_td {
+    text-align: justify; 
+    text-justify: inter-word;
+}
+
+#visual {
+    position: absolute;
+    top: 1200px;
+    left: 25px;
+    border: 5px solid #333;
+}
+
+#perform {
+    position: absolute;
+    top: 1200px;
+    left: 525px;
+    border: 5px solid #333;
+}
+
+#media {
+    position: absolute;
+    top: 1870px;
+    left: 25px;
+    border: 5px solid #333;
+}
+
+#literary {
+    position: absolute;
+    top: 1870px;
+    left: 525px;
+    border: 5px solid #333;
 }
