@@ -294,6 +294,7 @@ aside ul li.active {
     font-size: 22px; 
     text-shadow: .03em .03em 0 hsla(230,40%,50%,1);
     top: 390px;
+    width: 150ch;
     }
     #desc:after {
       content: attr(data-shadow);
